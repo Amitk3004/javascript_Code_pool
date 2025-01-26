@@ -1,0 +1,46 @@
+.loading-continer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 90vh;
+}
+
+.loading-outer {
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    border: 3px solid red;
+    border-right: 0px;
+    border-top: 0px;
+    align-self: center;
+    animation-name: circle;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.loading-inner {
+    height: 76px;
+    width: 77px;
+    border-radius: 40px;
+    align-self: center;
+    position: relative;
+    right: 91px;
+    border: 3px solid blue;
+    border-left: 0px;
+    border-top: 0px;
+    animation-name: circle;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: reverse;
+}
+
+
+
+@keyframes circle {
+    0%   { transform: rotate(0deg);}
+    /* 25%  { transform: rotate();} */
+    /* 50%  { transform: rotate(0.75turn);} */
+    100% { transform: rotate(360deg);}
+}
