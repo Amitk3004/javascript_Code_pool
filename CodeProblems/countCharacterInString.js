@@ -8,7 +8,7 @@ const discard = [' ', ','];
 function countCharInString(str) {
     let charData = {};
 
-    for(char of str) {
+    for(let char of str) {
         if(discard.includes(char)) continue; 
         if(char in charData) {
             charData[char] += 1;
@@ -25,7 +25,7 @@ function countCharInString(str) {
 function countCharUsingMap(str) {
     let map = new Map();
 
-    for(char of str) {
+    for(let char of str) {
         if(discard.includes(char)) continue;
         if(map.has(char)){
             map.set(char, map.get(char)+1);
