@@ -8,3 +8,6 @@
 
 - [Pokemon list API](https://pokeapi.co/api/v2/pokemon/)
 - [Pokemon detail API](https://pokeapi.co/api/v2/pokemon/1/)
+
+> Companies Asked
+ **Publicis Sapient**
