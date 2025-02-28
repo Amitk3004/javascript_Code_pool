@@ -1,0 +1,42 @@
+/* Best approch should be using flexbox, this can be achived using flex-wrap and flex-basis in combination */
+
+/* set container to display flex and wrap the overflowing items */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* using child selector > to select all the div under container div */
+.container > div {
+    border: 1px solid #afafaf;
+    border-radius: 10px;
+    text-align: center;
+    /* this is important flex property to make this happen, flex is combination of flex-grow flex-shrink flex-basis */
+    /* flex-basis 33% tells browser to set element initial size to 33% of availble space, it will make 3 div appear in a row */
+    flex: 1 1 33%; 
+    /* margin: 10px; */
+    box-shadow: 0px 5px 12px 1px #afafaf;
+    overflow: hidden;
+}
+
+.container > div div:last-child {
+    background-color: lightgreen;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.container > div div:first-child {
+    padding: 10px;
+    font-weight: bold;
+}
+
+/* To meet second requirment of responsive for mobile screen use media queries */
+
+/* on mobile screen set flex-basis to 100% */
+@media screen and (max-width: 430px ) {
+    .container > div {
+        flex: 1 1 100%
+    }
+}
