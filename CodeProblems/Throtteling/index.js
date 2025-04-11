@@ -1,25 +1,20 @@
 const button = document.querySelector('#button');
-// const result = document.querySelector('#result');
+
+const handleSearch = throttle(() => {
+    console.log('clicked');
+}, 1500);
 
 button.addEventListener('click', handleSearch);
 
-let timer = null;
-
-function throttle(callback, time) {
-    if (timer) {
-        return;
+function throttle(fn, time) {
+    let inThrottle = false;
+    return function(...args) {
+        if (!inThrottle) {
+            inThrottle = true;
+            fn(...args)
+            setTimeout(() => {
+                inThrottle = false
+            }, time);
+        }
     }
-    timer = setTimeout(() => {
-        callback();
-        timer = null;
-    }, time);
-
-
-}
-
-
-function handleSearch() {
-    throttle(() => {
-        console.log('clicked');
-    }, 1500);
-}
+};
