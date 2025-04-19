@@ -23,5 +23,4 @@
 21. Notification UI
 22. Calender meeting invite
 23. **[Responsive Cards UI](./Cards/)** (HTML, CSS)
-
-
+24. **[Count Good Strings](./countGoodString/)** (JS)
