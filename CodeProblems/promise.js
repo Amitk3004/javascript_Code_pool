@@ -7,12 +7,16 @@
 async function print() {
     const p = new Promise((res, rej) => {
         if(true) {
-            rej(1);
+            res(1);
         };
     });
     
     const p2 = Promise.reject(2);
     const p3 = Promise.resolve(3);
+
+    setTimeout(() => {console.log('timeout')}, 0);
+
+    p.then((e) => {console.log(e); return 10 }).then(() => {console.log('hello')});
 
     try{
         const allResponse = await Promise.all([p, p2, p3]);
